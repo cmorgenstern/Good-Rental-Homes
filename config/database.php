@@ -1,8 +1,31 @@
 <?php
 
 use Illuminate\Support\Str;
+use Illuminate\Database\DBAL\TimestampType;
 
 return [
+	
+	/*
+    |--------------------------------------------------------------------------
+    | Column Modification
+    |--------------------------------------------------------------------------
+    |
+	| Before modifying a column, you must install the doctrine/dbal package 
+	| using the Composer package manager. The Doctrine DBAL library is used to 
+	| determine the current state of the column and to create the SQL queries 
+	| needed to make the requested changes to your column.
+	| 
+	| If you plan to modify columns created using the timestamp method, you 
+	| must also add the following configuration to your application's 
+	| config/database.php configuration file.
+    |
+    */
+
+	'dbal' => [
+		'types' => [
+			'timestamp' => TimestampType::class,
+		],
+	],
 
     /*
     |--------------------------------------------------------------------------

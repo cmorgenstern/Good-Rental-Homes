@@ -40,21 +40,21 @@ class LLS_Controller extends Controller
     {
         //
         $item = new LandlordSurvey([
-            'tenant' => $request->get('tenant'),
-            'property' => $request->get('property'),
-            'start_date' => $request->get('start_date'),
-            'end_date' => $request->get('end_date'),
-            'communication' => $request->get('communication'),
-            'discretion' => $request->get('discretion'),
-            'responsiveness' => $request->get('responsiveness'),
-            'compliance' => $request->get('compliance'),
-            'overall_rating' => $request->get('overall_rating'),
-            'overall_comment' => $request->get('overall_comment'),
-            'anonymous' => $request->get('anonymous'),
-            'contact' => $request->get('contact'),
-            'agency' => $request->get('agency'),
-            'agency_name' => $request->get('agency_name'),
-
+            'address' => $request->address,
+            'anonymous' => $request->anonymous,
+            'start_date' => $request->start_date,
+			'end_date' => $request->end_date,
+			'landlord' => $request->landlord,
+			'agency' => $request->agency,
+            'agency_name' => $request->agency_name,
+			'communication' => $request->communication,
+            'discretion' => $request->discretion,
+            'responsiveness' => $request->responsiveness,
+            'compliance' => $request->compliance,
+            'overall_rating' => $request->overall_rating,
+            'overall_comment' => $request->overall_comment,
+            'contact' => $request->contact
+            
         ]);
         $item->save();
         return response()->json('Successfully added');
