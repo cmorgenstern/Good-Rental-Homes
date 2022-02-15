@@ -8,7 +8,7 @@ import CheckboxController from "../Components/ConditionalViolations";
 import RentAgianController from "../Components/ConditionalTenant";
 import ComplaintsController from "../Components/ConditionalComplaints";
 import "antd/dist/antd.css";
-import Map from './Map';
+import Map from '@/Components/Map';
 import withScriptjs from "react-google-maps/lib/withScriptjs";
 import Footer from "@/Components/Footer";
 import Checkbox from "@/Components/Checkbox";
